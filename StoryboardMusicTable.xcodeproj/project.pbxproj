@@ -13,6 +13,9 @@
 		28C80C0828ECB00B000745FA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28C80C0628ECB00B000745FA /* Main.storyboard */; };
 		28C80C0A28ECB00C000745FA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 28C80C0928ECB00C000745FA /* Assets.xcassets */; };
 		28C80C0D28ECB00C000745FA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28C80C0B28ECB00C000745FA /* LaunchScreen.storyboard */; };
+		28E1899228EF33D000A9B541 /* MusicCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28E1899128EF33D000A9B541 /* MusicCell.swift */; };
+		28E1899428EF391E00A9B541 /* AlbumProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28E1899328EF391E00A9B541 /* AlbumProtocol.swift */; };
+		28E1899628EF456E00A9B541 /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28E1899528EF456E00A9B541 /* Album.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,9 @@
 		28C80C0928ECB00C000745FA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		28C80C0C28ECB00C000745FA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		28C80C0E28ECB00C000745FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		28E1899128EF33D000A9B541 /* MusicCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicCell.swift; sourceTree = "<group>"; };
+		28E1899328EF391E00A9B541 /* AlbumProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumProtocol.swift; sourceTree = "<group>"; };
+		28E1899528EF456E00A9B541 /* Album.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Album.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,7 +65,10 @@
 				28C80C0028ECB00B000745FA /* AppDelegate.swift */,
 				28C80C0228ECB00B000745FA /* SceneDelegate.swift */,
 				28C80C0428ECB00B000745FA /* ViewController.swift */,
+				28E1899528EF456E00A9B541 /* Album.swift */,
 				28C80C0628ECB00B000745FA /* Main.storyboard */,
+				28E1899128EF33D000A9B541 /* MusicCell.swift */,
+				28E1899328EF391E00A9B541 /* AlbumProtocol.swift */,
 				28C80C0928ECB00C000745FA /* Assets.xcassets */,
 				28C80C0B28ECB00C000745FA /* LaunchScreen.storyboard */,
 				28C80C0E28ECB00C000745FA /* Info.plist */,
@@ -140,7 +149,10 @@
 			files = (
 				28C80C0528ECB00B000745FA /* ViewController.swift in Sources */,
 				28C80C0128ECB00B000745FA /* AppDelegate.swift in Sources */,
+				28E1899428EF391E00A9B541 /* AlbumProtocol.swift in Sources */,
 				28C80C0328ECB00B000745FA /* SceneDelegate.swift in Sources */,
+				28E1899228EF33D000A9B541 /* MusicCell.swift in Sources */,
+				28E1899628EF456E00A9B541 /* Album.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
