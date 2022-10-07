@@ -10,6 +10,6 @@ class MusicCell: UITableViewCell{
     
     @IBOutlet weak var artistOutlet: UILabel!
     @IBOutlet weak var titleOutlet: UILabel!
-    @IBOutlet weak var imageOutlet: UIImageView!
+    @IBOutlet weak var imageOutlet: AsyncImageView!
     
 }

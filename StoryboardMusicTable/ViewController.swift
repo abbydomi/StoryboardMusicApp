@@ -26,11 +26,18 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         let cell: MusicCell = tableView.dequeueReusableCell(withIdentifier: "musicCell", for: indexPath) as! MusicCell
         let albumName = collection[indexPath.row].getTitle()
         cell.titleOutlet.text = albumName
-        //Set album image
-        let url = URL(string: collection[indexPath.row].getImg())
+        
+        //Set album image (NOT ASYNC)
+        /*let url = URL(string: collection[indexPath.row].getImg())
         let data = try? Data(contentsOf: url!)
         let loadedImage: UIImage = UIImage(data: data!)!
-        cell.imageOutlet.image = loadedImage
+        cell.imageOutlet.image = loadedImage*/
+        
+        //Set album image (ASYNC)
+        if let url = URL(string: collection[indexPath.row].getImg()){
+            cell.imageOutlet.asyncLoad(from: url)
+        }
+        
         //Set album author
         let author = collection[indexPath.row].getArtist()
         cell.artistOutlet.text = author
