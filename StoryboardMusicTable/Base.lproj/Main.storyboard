@@ -43,7 +43,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Artista" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sGL-cv-dlO">
-                                                    <rect key="frame" x="160" y="40.333333333333336" width="29.333333333333343" height="11"/>
+                                                    <rect key="frame" x="160" y="40.333333333333336" width="168" height="11"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="9"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -55,6 +55,7 @@
                                                 <constraint firstAttribute="trailing" secondItem="JT3-Hb-HRB" secondAttribute="trailing" constant="10" id="H9x-no-NHf"/>
                                                 <constraint firstItem="5JW-R9-hWU" firstAttribute="leading" secondItem="Da5-Rk-qO1" secondAttribute="leadingMargin" constant="10" id="IeU-7P-hSt"/>
                                                 <constraint firstItem="5JW-R9-hWU" firstAttribute="top" secondItem="Da5-Rk-qO1" secondAttribute="top" constant="10" id="Iex-vd-vAg"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="sGL-cv-dlO" secondAttribute="trailing" constant="10" id="ZQP-qG-k4U"/>
                                                 <constraint firstItem="sGL-cv-dlO" firstAttribute="leading" secondItem="5JW-R9-hWU" secondAttribute="trailing" constant="10" id="dD5-oO-IhW"/>
                                                 <constraint firstItem="JT3-Hb-HRB" firstAttribute="leading" secondItem="5JW-R9-hWU" secondAttribute="trailing" constant="10" id="dJH-hM-AOf"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="5JW-R9-hWU" secondAttribute="bottom" constant="10" id="lK8-Jv-M9n"/>
