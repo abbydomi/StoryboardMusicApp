@@ -8,6 +8,7 @@
 import UIKit
 
 class ViewController: UITableViewController {
+    var activeRow: Int = 0
     let collection = [
         Album(name: "Y3Y2", artist: "Rojuu", imageURL: "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fpbs.twimg.com%2Fmedia%2FFdCxkRxXoAQ5Qkv%3Fformat%3Djpg%26name%3Dmedium&f=1&nofb=1&ipt=9f8e98be263d1449bf53d17627b6816477362c40f4b7576d8465425f6480b576&ipo=images"),
         Album(name: "Sour", artist: "Olivia Rodrigo", imageURL: "https://www.gannett-cdn.com/presto/2021/05/21/USAT/86d10a85-a577-426c-aff4-e63b52f2faa3-SOUR_FINAL.jpg?width=1320&height=1320&fit=crop&format=pjpg&auto=webp"),
@@ -41,12 +42,29 @@ class ViewController: UITableViewController {
         //Set album image (ASYNC)
         if let url = URL(string: collection[indexPath.row].getImg()){
             cell.imageOutlet.asyncLoad(from: url)
+            cell.imageOutlet.layer.cornerRadius = 10.0
         }
         
         return cell
     }
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        activeRow = indexPath.row
+    }
 
 
-
+    @IBSegueAction func segueToDetail(_ coder: NSCoder) -> DetailViewController? {
+        return DetailViewController(coder: coder)
+    }
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if (segue.identifier == "segueToDetail"){
+            if let nextViewController = segue.destination as? DetailViewController {
+                nextViewController.songTitle = collection[tableView.indexPathForSelectedRow!.row ].getTitle()
+                nextViewController.songImage = collection[tableView.indexPathForSelectedRow!.row].getImg()
+                nextViewController.songArtist = collection[tableView.indexPathForSelectedRow!.row].getArtist()
+            }
+        }
+    }
+    
 }
-
