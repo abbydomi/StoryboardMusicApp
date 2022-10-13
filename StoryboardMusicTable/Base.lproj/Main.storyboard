@@ -2,7 +2,8 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Z3A-2c-Fy6">
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21225"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -63,6 +64,7 @@
                                     <outlet property="artistOutlet" destination="wRH-Sl-6MB" id="1mw-AB-9jC"/>
                                     <outlet property="imageOutlet" destination="gtp-5s-10u" id="xPA-6m-7fc"/>
                                     <outlet property="titleOutlet" destination="Bph-zb-sBG" id="Uj6-uq-LM3"/>
+                                    <segue destination="pax-KT-S2u" kind="showDetail" identifier="segueToDetail" destinationCreationSelector="segueToDetail:" id="4FF-nn-7un"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -75,6 +77,57 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gtj-EZ-E8t" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="75" y="652"/>
+        </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="pMg-AX-Grg">
+            <objects>
+                <viewController id="pax-KT-S2u" customClass="DetailViewController" customModule="StoryboardMusicTable" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="YfA-84-SZE">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="787"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fJT-bp-SYs" customClass="AsyncImageView" customModule="StoryboardMusicTable" customModuleProvider="target">
+                                <rect key="frame" x="10" y="77" width="370" height="370"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="fJT-bp-SYs" secondAttribute="height" multiplier="1:1" id="HZ8-HX-BK7"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello World" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m7E-CU-U2L">
+                                <rect key="frame" x="10" y="457" width="370" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Brl-8O-IwU">
+                                <rect key="frame" x="10" y="497" width="370" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="c8D-ia-dDU"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="c8D-ia-dDU" firstAttribute="trailing" secondItem="fJT-bp-SYs" secondAttribute="trailing" constant="10" id="8ce-Vz-BAv"/>
+                            <constraint firstItem="Brl-8O-IwU" firstAttribute="top" secondItem="m7E-CU-U2L" secondAttribute="bottom" constant="10" id="AYJ-ML-Nu5"/>
+                            <constraint firstItem="m7E-CU-U2L" firstAttribute="leading" secondItem="c8D-ia-dDU" secondAttribute="leading" constant="10" id="B8I-QQ-sgK"/>
+                            <constraint firstItem="c8D-ia-dDU" firstAttribute="trailing" secondItem="m7E-CU-U2L" secondAttribute="trailing" constant="10" id="JDk-ZG-rIG"/>
+                            <constraint firstItem="c8D-ia-dDU" firstAttribute="trailing" secondItem="Brl-8O-IwU" secondAttribute="trailing" constant="10" id="Pa7-IV-849"/>
+                            <constraint firstItem="fJT-bp-SYs" firstAttribute="leading" secondItem="c8D-ia-dDU" secondAttribute="leading" constant="10" id="Y0o-Sh-qOl"/>
+                            <constraint firstItem="Brl-8O-IwU" firstAttribute="leading" secondItem="c8D-ia-dDU" secondAttribute="leading" constant="10" id="ihu-4L-VUP"/>
+                            <constraint firstItem="fJT-bp-SYs" firstAttribute="top" secondItem="c8D-ia-dDU" secondAttribute="top" constant="30" id="m8V-uM-nUH"/>
+                            <constraint firstItem="m7E-CU-U2L" firstAttribute="top" secondItem="fJT-bp-SYs" secondAttribute="bottom" constant="10" id="w4E-aP-0PF"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageAsync" destination="fJT-bp-SYs" id="K0Q-HE-Q5C"/>
+                        <outlet property="labelSongArtist" destination="Brl-8O-IwU" id="tYw-gP-GmK"/>
+                        <outlet property="labelSongTitle" destination="m7E-CU-U2L" id="53y-Jg-JPj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1Yf-KK-8R2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="796.92307692307691" y="651.89573459715632"/>
         </scene>
     </scenes>
     <resources>
