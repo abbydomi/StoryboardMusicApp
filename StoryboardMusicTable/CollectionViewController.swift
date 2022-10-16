@@ -1,14 +1,14 @@
 //
-//  ViewController.swift
+//  CollectionViewController.swift
 //  StoryboardMusicTable
 //
-//  Created by Abby Dominguez on 4/10/22.
+//  Created by Abby Dominguez on 16/10/22.
 //
 
 import UIKit
 
-class ViewController: UITableViewController {
 
+class CollectionViewController: UICollectionViewController {
     let collection = [
         Album(name: "Y3Y2", artist: "Rojuu", imageURL: "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fpbs.twimg.com%2Fmedia%2FFdCxkRxXoAQ5Qkv%3Fformat%3Djpg%26name%3Dmedium&f=1&nofb=1&ipt=9f8e98be263d1449bf53d17627b6816477362c40f4b7576d8465425f6480b576&ipo=images"),
         Album(name: "Sour", artist: "Olivia Rodrigo", imageURL: "https://www.gannett-cdn.com/presto/2021/05/21/USAT/86d10a85-a577-426c-aff4-e63b52f2faa3-SOUR_FINAL.jpg?width=1320&height=1320&fit=crop&format=pjpg&auto=webp"),
@@ -22,44 +22,48 @@ class ViewController: UITableViewController {
         Album(name: "Virtuality", artist: "Faxu", imageURL: "https://lastfm.freetls.fastly.net/i/u/ar0/0faaee7ca546c81a30f00ca8851c56ce.jpg"),
         Album(name: "Blisters in the pit of my heart", artist: "Martha", imageURL: "https://media.pitchfork.com/photos/5929bb7e5e6ef95969322c0f/1:1/w_600/37be49a7.jpg")]
     
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    let screenSize: CGRect = UIScreen.main.bounds
+    let margin: Int = 5
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        collectionView.delegate = self
+        collectionView.dataSource = self
+        let layout = UICollectionViewFlowLayout()
+        layout.itemSize = CGSize(width: (Int(screenSize.width)/2)-margin, height: 260)
+        collectionView.collectionViewLayout = layout
+    }
+
+    override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return collection.count
     }
+
+    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell: PlaylistCell = collectionView.dequeueReusableCell(withReuseIdentifier: "playlistCell", for: indexPath) as! PlaylistCell
     
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell: MusicCell = tableView.dequeueReusableCell(withIdentifier: "musicCell", for: indexPath) as! MusicCell
-        
-        cell.titleOutlet.text = collection[indexPath.row].getTitle()
-        cell.artistOutlet.text = collection[indexPath.row].getArtist()
-        
-        /* not async
-        let url = URL(string: collection[indexPath.row].getImageUrl())
-        let data = try? Data(contentsOf: url!)
-        let loadedImage: UIImage = UIImage(data: data!)!
-        cell.imageOutlet.image = loadedImage
-        //customCell.songImage = UIImage.loadData()
-         */
-        //Set album image (ASYNC)
         if let url = URL(string: collection[indexPath.row].getImg()){
             cell.imageOutlet.asyncLoad(from: url)
             cell.imageOutlet.layer.cornerRadius = 10.0
         }
-        
+        cell.artistOutlet.text = collection[indexPath.row].getArtist()
+        cell.titleOutlet.text = collection[indexPath.row].getTitle()
+    
         return cell
     }
 
-    @IBSegueAction func segueToDetail(_ coder: NSCoder) -> DetailViewController? {
+    @IBSegueAction func gotoDetail(_ coder: NSCoder) -> DetailViewController? {
         return DetailViewController(coder: coder)
     }
-    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if (segue.identifier == "segueToDetail"){
+        if (segue.identifier == "goToDetailSeque"){
             if let nextViewController = segue.destination as? DetailViewController {
-                nextViewController.songTitle = collection[tableView.indexPathForSelectedRow!.row ].getTitle()
-                nextViewController.songImage = collection[tableView.indexPathForSelectedRow!.row].getImg()
-                nextViewController.songArtist = collection[tableView.indexPathForSelectedRow!.row].getArtist()
+                let cell = sender as! PlaylistCell
+                let indexPath = self.collectionView!.indexPath(for: cell)
+                nextViewController.songTitle = collection[indexPath!.row].getTitle()
+                nextViewController.songImage = collection[indexPath!.row].getImg()
+                nextViewController.songArtist = collection[indexPath!.row].getArtist()
             }
         }
     }
-    
 }
