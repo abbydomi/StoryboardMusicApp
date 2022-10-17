@@ -26,7 +26,7 @@
 		28324EE228F5E73100953F81 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		288969D928FB93EA00A6EC01 /* CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
 		288969DF28FB9F4E00A6EC01 /* PlaylistCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaylistCell.swift; sourceTree = "<group>"; };
-		28C80BFD28ECB00B000745FA /* StoryboardMusicTable.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StoryboardMusicTable.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		28C80BFD28ECB00B000745FA /* StoryboardMusicApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StoryboardMusicApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		28C80C0028ECB00B000745FA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		28C80C0228ECB00B000745FA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		28C80C0428ECB00B000745FA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -54,7 +54,7 @@
 		28C80BF428ECB00B000745FA = {
 			isa = PBXGroup;
 			children = (
-				28C80BFF28ECB00B000745FA /* StoryboardMusicTable */,
+				28C80BFF28ECB00B000745FA /* StoryboardMusicApp */,
 				28C80BFE28ECB00B000745FA /* Products */,
 			);
 			sourceTree = "<group>";
@@ -62,12 +62,12 @@
 		28C80BFE28ECB00B000745FA /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				28C80BFD28ECB00B000745FA /* StoryboardMusicTable.app */,
+				28C80BFD28ECB00B000745FA /* StoryboardMusicApp.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		28C80BFF28ECB00B000745FA /* StoryboardMusicTable */ = {
+		28C80BFF28ECB00B000745FA /* StoryboardMusicApp */ = {
 			isa = PBXGroup;
 			children = (
 				28C80C0028ECB00B000745FA /* AppDelegate.swift */,
@@ -85,15 +85,15 @@
 				28E1899C28EFACCE00A9B541 /* AlbumProtocol.swift */,
 				28E1899D28EFACCE00A9B541 /* MusicCell.swift */,
 			);
-			path = StoryboardMusicTable;
+			path = StoryboardMusicApp;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		28C80BFC28ECB00B000745FA /* StoryboardMusicTable */ = {
+		28C80BFC28ECB00B000745FA /* StoryboardMusicApp */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 28C80C1128ECB00C000745FA /* Build configuration list for PBXNativeTarget "StoryboardMusicTable" */;
+			buildConfigurationList = 28C80C1128ECB00C000745FA /* Build configuration list for PBXNativeTarget "StoryboardMusicApp" */;
 			buildPhases = (
 				28C80BF928ECB00B000745FA /* Sources */,
 				28C80BFA28ECB00B000745FA /* Frameworks */,
@@ -103,9 +103,9 @@
 			);
 			dependencies = (
 			);
-			name = StoryboardMusicTable;
+			name = StoryboardMusicApp;
 			productName = StoryboardMusicTable;
-			productReference = 28C80BFD28ECB00B000745FA /* StoryboardMusicTable.app */;
+			productReference = 28C80BFD28ECB00B000745FA /* StoryboardMusicApp.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -123,7 +123,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 28C80BF828ECB00B000745FA /* Build configuration list for PBXProject "StoryboardMusicTable" */;
+			buildConfigurationList = 28C80BF828ECB00B000745FA /* Build configuration list for PBXProject "StoryboardMusicApp" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -136,7 +136,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				28C80BFC28ECB00B000745FA /* StoryboardMusicTable */,
+				28C80BFC28ECB00B000745FA /* StoryboardMusicApp */,
 			);
 		};
 /* End PBXProject section */
@@ -317,7 +317,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = HK6R3F5RZP;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = StoryboardMusicTable/Info.plist;
+				INFOPLIST_FILE = StoryboardMusicApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -328,7 +328,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.abbydomi.StoryboardMusicTable;
+				PRODUCT_BUNDLE_IDENTIFIER = com.abbydomi.StoryboardMusicApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
@@ -348,7 +348,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = HK6R3F5RZP;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = StoryboardMusicTable/Info.plist;
+				INFOPLIST_FILE = StoryboardMusicApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -359,7 +359,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.abbydomi.StoryboardMusicTable;
+				PRODUCT_BUNDLE_IDENTIFIER = com.abbydomi.StoryboardMusicApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
@@ -373,7 +373,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		28C80BF828ECB00B000745FA /* Build configuration list for PBXProject "StoryboardMusicTable" */ = {
+		28C80BF828ECB00B000745FA /* Build configuration list for PBXProject "StoryboardMusicApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				28C80C0F28ECB00C000745FA /* Debug */,
@@ -382,7 +382,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		28C80C1128ECB00C000745FA /* Build configuration list for PBXNativeTarget "StoryboardMusicTable" */ = {
+		28C80C1128ECB00C000745FA /* Build configuration list for PBXNativeTarget "StoryboardMusicApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				28C80C1228ECB00C000745FA /* Debug */,
