@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		28324EE328F5E73100953F81 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28324EE228F5E73100953F81 /* DetailViewController.swift */; };
 		285ED4F828FDBBB800B08853 /* AlbumTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 285ED4F728FDBBB800B08853 /* AlbumTableView.swift */; };
+		288258E928FF5665006A23E7 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 288258E728FF5665006A23E7 /* Model.xcdatamodeld */; };
 		288969DA28FB93EA00A6EC01 /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 288969D928FB93EA00A6EC01 /* CollectionViewController.swift */; };
 		288969E028FB9F4E00A6EC01 /* PlaylistCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 288969DF28FB9F4E00A6EC01 /* PlaylistCell.swift */; };
 		28C80C0128ECB00B000745FA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28C80C0028ECB00B000745FA /* AppDelegate.swift */; };
@@ -25,6 +26,7 @@
 /* Begin PBXFileReference section */
 		28324EE228F5E73100953F81 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		285ED4F728FDBBB800B08853 /* AlbumTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumTableView.swift; sourceTree = "<group>"; };
+		288258E828FF5665006A23E7 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		288969D928FB93EA00A6EC01 /* CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
 		288969DF28FB9F4E00A6EC01 /* PlaylistCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaylistCell.swift; sourceTree = "<group>"; };
 		28C80BFD28ECB00B000745FA /* StoryboardMusicApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StoryboardMusicApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -84,6 +86,7 @@
 				28E1899B28EFACCE00A9B541 /* Music.swift */,
 				28E1899D28EFACCE00A9B541 /* MusicCell.swift */,
 				285ED4F728FDBBB800B08853 /* AlbumTableView.swift */,
+				288258E728FF5665006A23E7 /* Model.xcdatamodeld */,
 			);
 			path = StoryboardMusicApp;
 			sourceTree = "<group>";
@@ -168,6 +171,7 @@
 				28C80C0328ECB00B000745FA /* SceneDelegate.swift in Sources */,
 				28E1899A28EFACB700A9B541 /* AsyncImageView.swift in Sources */,
 				28E1899E28EFACCE00A9B541 /* Music.swift in Sources */,
+				288258E928FF5665006A23E7 /* Model.xcdatamodeld in Sources */,
 				285ED4F828FDBBB800B08853 /* AlbumTableView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -392,6 +396,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		288258E728FF5665006A23E7 /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				288258E828FF5665006A23E7 /* Model.xcdatamodel */,
+			);
+			currentVersion = 288258E828FF5665006A23E7 /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 28C80BF528ECB00B000745FA /* Project object */;
 }
