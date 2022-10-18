@@ -28,7 +28,7 @@
         <!--Music-->
         <scene sceneID="UOL-pe-FGO">
             <objects>
-                <collectionViewController id="xjd-gs-qmR" customClass="CollectionViewController" customModule="StoryboardMusicTable" customModuleProvider="target" sceneMemberID="viewController">
+                <collectionViewController id="xjd-gs-qmR" customClass="CollectionViewController" customModule="StoryboardMusicApp" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="PKk-rm-I9e">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -40,14 +40,14 @@
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="playlistCell" id="OOh-pE-w7t" customClass="PlaylistCell" customModule="StoryboardMusicTable" customModuleProvider="target">
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="playlistCell" id="OOh-pE-w7t" customClass="PlaylistCell" customModule="StoryboardMusicApp" customModuleProvider="target">
                                 <rect key="frame" x="95" y="0.0" width="200" height="260"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="FSb-su-Gie">
                                     <rect key="frame" x="0.0" y="0.0" width="200" height="260"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <subviews>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qPT-Jy-zgN" customClass="AsyncImageView" customModule="StoryboardMusicTable" customModuleProvider="target">
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qPT-Jy-zgN" customClass="AsyncImageView" customModule="StoryboardMusicApp" customModuleProvider="target">
                                             <rect key="frame" x="10" y="10" width="180" height="180"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" secondItem="qPT-Jy-zgN" secondAttribute="height" multiplier="1:1" id="AD1-sL-kBB"/>
@@ -102,41 +102,80 @@
         <!--Detail View Controller-->
         <scene sceneID="pMg-AX-Grg">
             <objects>
-                <viewController id="pax-KT-S2u" customClass="DetailViewController" customModule="StoryboardMusicTable" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="pax-KT-S2u" customClass="DetailViewController" customModule="StoryboardMusicApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="YfA-84-SZE">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="787"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fJT-bp-SYs" customClass="AsyncImageView" customModule="StoryboardMusicTable" customModuleProvider="target">
-                                <rect key="frame" x="10" y="77" width="370" height="370"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fJT-bp-SYs" customClass="AsyncImageView" customModule="StoryboardMusicApp" customModuleProvider="target">
+                                <rect key="frame" x="60" y="77" width="270" height="270"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="fJT-bp-SYs" secondAttribute="height" multiplier="1:1" id="HZ8-HX-BK7"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello World" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m7E-CU-U2L">
-                                <rect key="frame" x="10" y="457" width="370" height="30"/>
+                                <rect key="frame" x="10" y="357" width="370" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Brl-8O-IwU">
-                                <rect key="frame" x="10" y="497" width="370" height="21"/>
+                                <rect key="frame" x="10" y="390" width="370" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" systemColor="systemPinkColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Z2R-2C-FLJ" customClass="AlbumTableView" customModule="StoryboardMusicApp" customModuleProvider="target">
+                                <rect key="frame" x="10" y="451" width="370" height="326"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="albumCell" id="3nh-HY-JIj" customClass="AlbumDetailCell" customModule="StoryboardMusicApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50" width="370" height="43.666667938232422"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="3nh-HY-JIj" id="MSF-V4-oYz">
+                                            <rect key="frame" x="0.0" y="0.0" width="370" height="43.666667938232422"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="99" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qui-LM-3ZR">
+                                                    <rect key="frame" x="20" y="11" width="21" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" systemColor="systemGrayColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Track Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eyZ-3e-nww">
+                                                    <rect key="frame" x="49" y="11" width="285" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="trackName" destination="eyZ-3e-nww" id="cEk-at-5Kg"/>
+                                            <outlet property="trackNo" destination="qui-LM-3ZR" id="RtP-hm-K7O"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="c8D-ia-dDU"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="c8D-ia-dDU" firstAttribute="trailing" secondItem="fJT-bp-SYs" secondAttribute="trailing" constant="10" id="8ce-Vz-BAv"/>
-                            <constraint firstItem="Brl-8O-IwU" firstAttribute="top" secondItem="m7E-CU-U2L" secondAttribute="bottom" constant="10" id="AYJ-ML-Nu5"/>
+                            <constraint firstItem="Z2R-2C-FLJ" firstAttribute="leading" secondItem="c8D-ia-dDU" secondAttribute="leading" constant="10" id="1cw-4b-9Mc"/>
+                            <constraint firstItem="c8D-ia-dDU" firstAttribute="trailing" secondItem="fJT-bp-SYs" secondAttribute="trailing" constant="60" id="8ce-Vz-BAv"/>
+                            <constraint firstItem="Brl-8O-IwU" firstAttribute="top" secondItem="m7E-CU-U2L" secondAttribute="bottom" constant="3" id="AYJ-ML-Nu5"/>
                             <constraint firstItem="m7E-CU-U2L" firstAttribute="leading" secondItem="c8D-ia-dDU" secondAttribute="leading" constant="10" id="B8I-QQ-sgK"/>
+                            <constraint firstItem="Z2R-2C-FLJ" firstAttribute="top" secondItem="Brl-8O-IwU" secondAttribute="bottom" constant="40" id="BH6-KC-RbY"/>
                             <constraint firstItem="c8D-ia-dDU" firstAttribute="trailing" secondItem="m7E-CU-U2L" secondAttribute="trailing" constant="10" id="JDk-ZG-rIG"/>
                             <constraint firstItem="c8D-ia-dDU" firstAttribute="trailing" secondItem="Brl-8O-IwU" secondAttribute="trailing" constant="10" id="Pa7-IV-849"/>
-                            <constraint firstItem="fJT-bp-SYs" firstAttribute="leading" secondItem="c8D-ia-dDU" secondAttribute="leading" constant="10" id="Y0o-Sh-qOl"/>
+                            <constraint firstItem="Z2R-2C-FLJ" firstAttribute="leading" secondItem="c8D-ia-dDU" secondAttribute="leading" constant="10" id="TxX-nX-JxC"/>
+                            <constraint firstItem="c8D-ia-dDU" firstAttribute="bottom" secondItem="Z2R-2C-FLJ" secondAttribute="bottom" constant="10" id="XS8-aX-CZc"/>
+                            <constraint firstItem="fJT-bp-SYs" firstAttribute="leading" secondItem="c8D-ia-dDU" secondAttribute="leading" constant="60" id="Y0o-Sh-qOl"/>
                             <constraint firstItem="Brl-8O-IwU" firstAttribute="leading" secondItem="c8D-ia-dDU" secondAttribute="leading" constant="10" id="ihu-4L-VUP"/>
                             <constraint firstItem="fJT-bp-SYs" firstAttribute="top" secondItem="c8D-ia-dDU" secondAttribute="top" constant="30" id="m8V-uM-nUH"/>
+                            <constraint firstItem="c8D-ia-dDU" firstAttribute="trailing" secondItem="Z2R-2C-FLJ" secondAttribute="trailing" constant="10" id="uMw-5k-eia"/>
                             <constraint firstItem="m7E-CU-U2L" firstAttribute="top" secondItem="fJT-bp-SYs" secondAttribute="bottom" constant="10" id="w4E-aP-0PF"/>
                         </constraints>
                     </view>
@@ -144,11 +183,12 @@
                         <outlet property="imageAsync" destination="fJT-bp-SYs" id="K0Q-HE-Q5C"/>
                         <outlet property="labelSongArtist" destination="Brl-8O-IwU" id="tYw-gP-GmK"/>
                         <outlet property="labelSongTitle" destination="m7E-CU-U2L" id="53y-Jg-JPj"/>
+                        <outlet property="tableView" destination="Z2R-2C-FLJ" id="wb1-Sq-hPL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Yf-KK-8R2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-892" y="1341"/>
+            <point key="canvasLocation" x="-892.30769230769226" y="1340.7582938388625"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="YzH-rk-qGx">
@@ -172,20 +212,20 @@
         <!--Music-->
         <scene sceneID="9v9-Zr-2CR">
             <objects>
-                <tableViewController id="czF-M0-yMw" customClass="ViewController" customModule="StoryboardMusicTable" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="czF-M0-yMw" customClass="ViewController" customModule="StoryboardMusicApp" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="srh-Nw-jXj">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="musicCell" rowHeight="150" id="xYR-vU-jZt" customClass="MusicCell" customModule="StoryboardMusicTable" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="musicCell" rowHeight="150" id="xYR-vU-jZt" customClass="MusicCell" customModule="StoryboardMusicApp" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="50" width="390" height="150"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="xYR-vU-jZt" id="TaE-eY-AlN">
                                     <rect key="frame" x="0.0" y="0.0" width="390" height="150"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3DO-RV-rK4" customClass="AsyncImageView" customModule="StoryboardMusicTable" customModuleProvider="target">
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3DO-RV-rK4" customClass="AsyncImageView" customModule="StoryboardMusicApp" customModuleProvider="target">
                                             <rect key="frame" x="30" y="10" width="120" height="119"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="120" id="XpI-IF-7SV"/>
@@ -245,6 +285,9 @@
         <image name="plus" catalog="system" width="128" height="113"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGrayColor">
+            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemPinkColor">
             <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
