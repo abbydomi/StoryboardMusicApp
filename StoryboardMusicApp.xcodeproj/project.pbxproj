@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		28324EE328F5E73100953F81 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28324EE228F5E73100953F81 /* DetailViewController.swift */; };
-		285ED4F828FDBBB800B08853 /* AlbumTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 285ED4F728FDBBB800B08853 /* AlbumTableView.swift */; };
 		288969DA28FB93EA00A6EC01 /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 288969D928FB93EA00A6EC01 /* CollectionViewController.swift */; };
 		288969E028FB9F4E00A6EC01 /* PlaylistCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 288969DF28FB9F4E00A6EC01 /* PlaylistCell.swift */; };
 		28C80C0128ECB00B000745FA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28C80C0028ECB00B000745FA /* AppDelegate.swift */; };
@@ -18,15 +17,13 @@
 		28C80C0A28ECB00C000745FA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 28C80C0928ECB00C000745FA /* Assets.xcassets */; };
 		28C80C0D28ECB00C000745FA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28C80C0B28ECB00C000745FA /* LaunchScreen.storyboard */; };
 		28E1899A28EFACB700A9B541 /* AsyncImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28E1899928EFACB700A9B541 /* AsyncImageView.swift */; };
-		28E1899E28EFACCE00A9B541 /* Music.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28E1899B28EFACCE00A9B541 /* Music.swift */; };
+		28E1899E28EFACCE00A9B541 /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28E1899B28EFACCE00A9B541 /* Album.swift */; };
+		28E1899F28EFACCE00A9B541 /* AlbumProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28E1899C28EFACCE00A9B541 /* AlbumProtocol.swift */; };
 		28E189A028EFACCE00A9B541 /* MusicCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28E1899D28EFACCE00A9B541 /* MusicCell.swift */; };
-		AADEB0D403A03421FAEA0D9E /* Pods_StoryboardMusicApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB0EE79D6739063963860C28 /* Pods_StoryboardMusicApp.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0FF061A8A83009538614B7DE /* Pods-StoryboardMusicApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StoryboardMusicApp.debug.xcconfig"; path = "Target Support Files/Pods-StoryboardMusicApp/Pods-StoryboardMusicApp.debug.xcconfig"; sourceTree = "<group>"; };
 		28324EE228F5E73100953F81 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
-		285ED4F728FDBBB800B08853 /* AlbumTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumTableView.swift; sourceTree = "<group>"; };
 		288969D928FB93EA00A6EC01 /* CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
 		288969DF28FB9F4E00A6EC01 /* PlaylistCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaylistCell.swift; sourceTree = "<group>"; };
 		28C80BFD28ECB00B000745FA /* StoryboardMusicApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StoryboardMusicApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -38,10 +35,9 @@
 		28C80C0C28ECB00C000745FA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		28C80C0E28ECB00C000745FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		28E1899928EFACB700A9B541 /* AsyncImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AsyncImageView.swift; path = "../../../../Downloads/StoryboardMusicTable-feature-viewcontroller/StoryboardMusicTable/AsyncImageView.swift"; sourceTree = "<group>"; };
-		28E1899B28EFACCE00A9B541 /* Music.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Music.swift; path = "../../../../Downloads/StoryboardMusicTable-feature-viewcontroller/StoryboardMusicTable/Music.swift"; sourceTree = "<group>"; };
+		28E1899B28EFACCE00A9B541 /* Album.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Album.swift; path = "../../../../Downloads/StoryboardMusicTable-feature-viewcontroller/StoryboardMusicTable/Album.swift"; sourceTree = "<group>"; };
+		28E1899C28EFACCE00A9B541 /* AlbumProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AlbumProtocol.swift; path = "../../../../Downloads/StoryboardMusicTable-feature-viewcontroller/StoryboardMusicTable/AlbumProtocol.swift"; sourceTree = "<group>"; };
 		28E1899D28EFACCE00A9B541 /* MusicCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MusicCell.swift; path = "../../../../Downloads/StoryboardMusicTable-feature-viewcontroller/StoryboardMusicTable/MusicCell.swift"; sourceTree = "<group>"; };
-		2F1A25A9C7F4197D65A7F4E9 /* Pods-StoryboardMusicApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StoryboardMusicApp.release.xcconfig"; path = "Target Support Files/Pods-StoryboardMusicApp/Pods-StoryboardMusicApp.release.xcconfig"; sourceTree = "<group>"; };
-		EB0EE79D6739063963860C28 /* Pods_StoryboardMusicApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StoryboardMusicApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,7 +45,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AADEB0D403A03421FAEA0D9E /* Pods_StoryboardMusicApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,8 +56,6 @@
 			children = (
 				28C80BFF28ECB00B000745FA /* StoryboardMusicApp */,
 				28C80BFE28ECB00B000745FA /* Products */,
-				7DF2A00C8D93755031482452 /* Pods */,
-				D02A32B23977F0CC903216CC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -88,29 +81,11 @@
 				28C80C0B28ECB00C000745FA /* LaunchScreen.storyboard */,
 				28C80C0E28ECB00C000745FA /* Info.plist */,
 				28E1899928EFACB700A9B541 /* AsyncImageView.swift */,
-				28E1899B28EFACCE00A9B541 /* Music.swift */,
+				28E1899B28EFACCE00A9B541 /* Album.swift */,
+				28E1899C28EFACCE00A9B541 /* AlbumProtocol.swift */,
 				28E1899D28EFACCE00A9B541 /* MusicCell.swift */,
-				285ED4F728FDBBB800B08853 /* AlbumTableView.swift */,
 			);
 			path = StoryboardMusicApp;
-			sourceTree = "<group>";
-		};
-		7DF2A00C8D93755031482452 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				0FF061A8A83009538614B7DE /* Pods-StoryboardMusicApp.debug.xcconfig */,
-				2F1A25A9C7F4197D65A7F4E9 /* Pods-StoryboardMusicApp.release.xcconfig */,
-			);
-			name = Pods;
-			path = Pods;
-			sourceTree = "<group>";
-		};
-		D02A32B23977F0CC903216CC /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				EB0EE79D6739063963860C28 /* Pods_StoryboardMusicApp.framework */,
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -120,11 +95,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 28C80C1128ECB00C000745FA /* Build configuration list for PBXNativeTarget "StoryboardMusicApp" */;
 			buildPhases = (
-				36CC76C89E0D95F62FC320ED /* [CP] Check Pods Manifest.lock */,
 				28C80BF928ECB00B000745FA /* Sources */,
 				28C80BFA28ECB00B000745FA /* Frameworks */,
 				28C80BFB28ECB00B000745FA /* Resources */,
-				1BC62CDF6752CB7A6B094D85 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -181,48 +154,6 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
-/* Begin PBXShellScriptBuildPhase section */
-		1BC62CDF6752CB7A6B094D85 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-StoryboardMusicApp/Pods-StoryboardMusicApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-StoryboardMusicApp/Pods-StoryboardMusicApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-StoryboardMusicApp/Pods-StoryboardMusicApp-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		36CC76C89E0D95F62FC320ED /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-StoryboardMusicApp-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
 		28C80BF928ECB00B000745FA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -236,8 +167,8 @@
 				28E189A028EFACCE00A9B541 /* MusicCell.swift in Sources */,
 				28C80C0328ECB00B000745FA /* SceneDelegate.swift in Sources */,
 				28E1899A28EFACB700A9B541 /* AsyncImageView.swift in Sources */,
-				28E1899E28EFACCE00A9B541 /* Music.swift in Sources */,
-				285ED4F828FDBBB800B08853 /* AlbumTableView.swift in Sources */,
+				28E1899E28EFACCE00A9B541 /* Album.swift in Sources */,
+				28E1899F28EFACCE00A9B541 /* AlbumProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -379,7 +310,6 @@
 		};
 		28C80C1228ECB00C000745FA /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0FF061A8A83009538614B7DE /* Pods-StoryboardMusicApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -411,7 +341,6 @@
 		};
 		28C80C1328ECB00C000745FA /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2F1A25A9C7F4197D65A7F4E9 /* Pods-StoryboardMusicApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
