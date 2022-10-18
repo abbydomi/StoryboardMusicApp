@@ -8,6 +8,7 @@
 import UIKit
 
 class ViewController: UITableViewController {
+    /*
     var collection: [Album] = []
     override func viewDidLoad() {
         collection = initMusic()
@@ -179,7 +180,7 @@ class ViewController: UITableViewController {
             Album(name: "Blisters in the pit of my heart", artist: "Martha", imageURL: "https://media.pitchfork.com/photos/5929bb7e5e6ef95969322c0f/1:1/w_600/37be49a7.jpg", songs: albumBlisters)]
         
     }
-    
+    */
 }
 
 

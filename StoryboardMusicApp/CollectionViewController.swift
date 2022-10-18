@@ -15,6 +15,8 @@ class CollectionViewController: UICollectionViewController {
     let screenSize: CGRect = UIScreen.main.bounds
     let margin: Int = 5
     
+    (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         collection = initMusic()
@@ -58,7 +60,11 @@ class CollectionViewController: UICollectionViewController {
         }
     }
     func initMusic() -> [Album]{
-        let albumY3Y2 = [
+        return [
+            Album(name: "album1", artist: "artist1", imageURL: "ttps://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fpbs.twimg.com%2Fmedia%2FFdCxkRxXoAQ5Qkv%3Fformat%3Djpg%26name%3Dmedium&f=1&nofb=1&ipt=9f8e98be263d1449bf53d17627b6816477362c40f4b7576d8465425f6480b576&ipo=images", songs: [])
+        ]
+        
+        /*let albumY3Y2 = [
             Song(song: "Lugar Seguro 3.0", artist: "Rojuu & Carzé"),
             Song(song: "Twilight", artist: "Rojuu, Saramalacara & Carzé"),
             Song(song: "Infinite Azure", artist: "Rojuu & Mda"),
@@ -181,7 +187,7 @@ class CollectionViewController: UICollectionViewController {
             Album(name: "Motions", artist: "Jeremy Zucker", imageURL: "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/80/46/b3/8046b31a-4dde-c3a8-2b8a-aef1ff3fe7bb/00602557714999.rgb.jpg/600x600bf-60.jpg", songs: albumMotions),
             Album(name: "Best Buds", artist: "Mom Jeans", imageURL: "https://m.media-amazon.com/images/I/71GPefjCGDL._SL1500_.jpg", songs: albumBestBuds),
             Album(name: "Virtuality", artist: "Faxu", imageURL: "https://lastfm.freetls.fastly.net/i/u/ar0/0faaee7ca546c81a30f00ca8851c56ce.jpg", songs: albumVirtuality),
-            Album(name: "Blisters in the pit of my heart", artist: "Martha", imageURL: "https://media.pitchfork.com/photos/5929bb7e5e6ef95969322c0f/1:1/w_600/37be49a7.jpg", songs: albumBlisters)]
+            Album(name: "Blisters in the pit of my heart", artist: "Martha", imageURL: "https://media.pitchfork.com/photos/5929bb7e5e6ef95969322c0f/1:1/w_600/37be49a7.jpg", songs: albumBlisters)]*/
         
     }
     

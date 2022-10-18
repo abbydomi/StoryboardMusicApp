@@ -10,6 +10,7 @@
 		28324EE328F5E73100953F81 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28324EE228F5E73100953F81 /* DetailViewController.swift */; };
 		285ED4F828FDBBB800B08853 /* AlbumTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 285ED4F728FDBBB800B08853 /* AlbumTableView.swift */; };
 		288258E928FF5665006A23E7 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 288258E728FF5665006A23E7 /* Model.xcdatamodeld */; };
+		2882590F28FF5F35006A23E7 /* Song+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2882590D28FF5F35006A23E7 /* Song+CoreDataClass.swift */; };
 		288969DA28FB93EA00A6EC01 /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 288969D928FB93EA00A6EC01 /* CollectionViewController.swift */; };
 		288969E028FB9F4E00A6EC01 /* PlaylistCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 288969DF28FB9F4E00A6EC01 /* PlaylistCell.swift */; };
 		28C80C0128ECB00B000745FA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28C80C0028ECB00B000745FA /* AppDelegate.swift */; };
@@ -27,6 +28,8 @@
 		28324EE228F5E73100953F81 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		285ED4F728FDBBB800B08853 /* AlbumTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumTableView.swift; sourceTree = "<group>"; };
 		288258E828FF5665006A23E7 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		2882590D28FF5F35006A23E7 /* Song+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Song+CoreDataClass.swift"; sourceTree = "<group>"; };
+		2882591228FF5FAF006A23E7 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		288969D928FB93EA00A6EC01 /* CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
 		288969DF28FB9F4E00A6EC01 /* PlaylistCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaylistCell.swift; sourceTree = "<group>"; };
 		28C80BFD28ECB00B000745FA /* StoryboardMusicApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StoryboardMusicApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -53,11 +56,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2882591128FF5FAF006A23E7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2882591228FF5FAF006A23E7 /* CoreData.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2882591428FF6214006A23E7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				288258E728FF5665006A23E7 /* Model.xcdatamodeld */,
+				2882590D28FF5F35006A23E7 /* Song+CoreDataClass.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		28C80BF428ECB00B000745FA = {
 			isa = PBXGroup;
 			children = (
+				2882591428FF6214006A23E7 /* Model */,
 				28C80BFF28ECB00B000745FA /* StoryboardMusicApp */,
 				28C80BFE28ECB00B000745FA /* Products */,
+				2882591128FF5FAF006A23E7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -86,7 +108,6 @@
 				28E1899B28EFACCE00A9B541 /* Music.swift */,
 				28E1899D28EFACCE00A9B541 /* MusicCell.swift */,
 				285ED4F728FDBBB800B08853 /* AlbumTableView.swift */,
-				288258E728FF5665006A23E7 /* Model.xcdatamodeld */,
 			);
 			path = StoryboardMusicApp;
 			sourceTree = "<group>";
@@ -164,6 +185,7 @@
 			files = (
 				288969DA28FB93EA00A6EC01 /* CollectionViewController.swift in Sources */,
 				28C80C0528ECB00B000745FA /* ViewController.swift in Sources */,
+				2882590F28FF5F35006A23E7 /* Song+CoreDataClass.swift in Sources */,
 				28324EE328F5E73100953F81 /* DetailViewController.swift in Sources */,
 				288969E028FB9F4E00A6EC01 /* PlaylistCell.swift in Sources */,
 				28C80C0128ECB00B000745FA /* AppDelegate.swift in Sources */,
