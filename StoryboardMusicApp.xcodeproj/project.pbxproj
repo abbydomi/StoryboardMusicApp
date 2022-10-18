@@ -20,7 +20,6 @@
 		28E1899A28EFACB700A9B541 /* AsyncImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28E1899928EFACB700A9B541 /* AsyncImageView.swift */; };
 		28E1899E28EFACCE00A9B541 /* Music.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28E1899B28EFACCE00A9B541 /* Music.swift */; };
 		28E189A028EFACCE00A9B541 /* MusicCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28E1899D28EFACCE00A9B541 /* MusicCell.swift */; };
-		AADEB0D403A03421FAEA0D9E /* Pods_StoryboardMusicApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB0EE79D6739063963860C28 /* Pods_StoryboardMusicApp.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,7 +40,6 @@
 		28E1899B28EFACCE00A9B541 /* Music.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Music.swift; path = "../../../../Downloads/StoryboardMusicTable-feature-viewcontroller/StoryboardMusicTable/Music.swift"; sourceTree = "<group>"; };
 		28E1899D28EFACCE00A9B541 /* MusicCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MusicCell.swift; path = "../../../../Downloads/StoryboardMusicTable-feature-viewcontroller/StoryboardMusicTable/MusicCell.swift"; sourceTree = "<group>"; };
 		2F1A25A9C7F4197D65A7F4E9 /* Pods-StoryboardMusicApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StoryboardMusicApp.release.xcconfig"; path = "Target Support Files/Pods-StoryboardMusicApp/Pods-StoryboardMusicApp.release.xcconfig"; sourceTree = "<group>"; };
-		EB0EE79D6739063963860C28 /* Pods_StoryboardMusicApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StoryboardMusicApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,7 +47,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AADEB0D403A03421FAEA0D9E /* Pods_StoryboardMusicApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -101,14 +98,12 @@
 				0FF061A8A83009538614B7DE /* Pods-StoryboardMusicApp.debug.xcconfig */,
 				2F1A25A9C7F4197D65A7F4E9 /* Pods-StoryboardMusicApp.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
 		D02A32B23977F0CC903216CC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				EB0EE79D6739063963860C28 /* Pods_StoryboardMusicApp.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -124,7 +119,6 @@
 				28C80BF928ECB00B000745FA /* Sources */,
 				28C80BFA28ECB00B000745FA /* Frameworks */,
 				28C80BFB28ECB00B000745FA /* Resources */,
-				1BC62CDF6752CB7A6B094D85 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -182,23 +176,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		1BC62CDF6752CB7A6B094D85 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-StoryboardMusicApp/Pods-StoryboardMusicApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-StoryboardMusicApp/Pods-StoryboardMusicApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-StoryboardMusicApp/Pods-StoryboardMusicApp-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		36CC76C89E0D95F62FC320ED /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;

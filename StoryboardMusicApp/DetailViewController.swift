@@ -7,7 +7,9 @@
 
 import UIKit
 
-class DetailViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class DetailViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UIContextMenuInteractionDelegate {
+
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return songList.count
     }
@@ -18,6 +20,10 @@ class DetailViewController: UIViewController, UITableViewDelegate, UITableViewDa
         cell.trackNo.text = String(indexPath.row+1)
         cell.trackName.text = songList[indexPath.row].getSongName()
         
+        /*let tap = UITapGestureRecognizer(target: self, action: #selector(tappedCell(sender: )))
+        cell.addGestureRecognizer(tap)*/
+        let contextMenu = UIContextMenuInteraction(delegate: self)
+        cell.addInteraction(contextMenu)
         return cell
     }
 
@@ -41,5 +47,27 @@ class DetailViewController: UIViewController, UITableViewDelegate, UITableViewDa
         }
         tableView.dataSource = self
         tableView.delegate = self
+    }
+    
+    func contextMenuInteraction(_ interaction: UIContextMenuInteraction, configurationForMenuAtLocation location: CGPoint) -> UIContextMenuConfiguration? {
+        return UIContextMenuConfiguration(
+            identifier: nil,
+            previewProvider: nil) { _ in
+                
+                let addToPlaylist = UIAction(
+                    title: "Add to a playlist",
+                    image: (UIImage(systemName: "text.badge.plus"))) { _ in
+                    print("tested")
+                }
+                let actionRemove = UIAction(
+                    title: "Remove",
+                    image: (UIImage(systemName: "trash")),
+                    attributes: .destructive
+                ) { _ in
+                    print("remove")
+                }
+        
+                return UIMenu(children: [addToPlaylist, actionRemove])
+            }
     }
 }
