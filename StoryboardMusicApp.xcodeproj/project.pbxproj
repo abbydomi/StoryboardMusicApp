@@ -20,6 +20,7 @@
 		28E1899A28EFACB700A9B541 /* AsyncImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28E1899928EFACB700A9B541 /* AsyncImageView.swift */; };
 		28E1899E28EFACCE00A9B541 /* Music.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28E1899B28EFACCE00A9B541 /* Music.swift */; };
 		28E189A028EFACCE00A9B541 /* MusicCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28E1899D28EFACCE00A9B541 /* MusicCell.swift */; };
+		FD44C4D40E1F9D5270B26BF2 /* Pods_StoryboardMusicApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEA90AD94DB507B1B59D2AF5 /* Pods_StoryboardMusicApp.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		28E1899B28EFACCE00A9B541 /* Music.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Music.swift; path = "../../../../Downloads/StoryboardMusicTable-feature-viewcontroller/StoryboardMusicTable/Music.swift"; sourceTree = "<group>"; };
 		28E1899D28EFACCE00A9B541 /* MusicCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MusicCell.swift; path = "../../../../Downloads/StoryboardMusicTable-feature-viewcontroller/StoryboardMusicTable/MusicCell.swift"; sourceTree = "<group>"; };
 		2F1A25A9C7F4197D65A7F4E9 /* Pods-StoryboardMusicApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StoryboardMusicApp.release.xcconfig"; path = "Target Support Files/Pods-StoryboardMusicApp/Pods-StoryboardMusicApp.release.xcconfig"; sourceTree = "<group>"; };
+		DEA90AD94DB507B1B59D2AF5 /* Pods_StoryboardMusicApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StoryboardMusicApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FD44C4D40E1F9D5270B26BF2 /* Pods_StoryboardMusicApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -104,6 +107,7 @@
 		D02A32B23977F0CC903216CC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				DEA90AD94DB507B1B59D2AF5 /* Pods_StoryboardMusicApp.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
