@@ -10,17 +10,14 @@ import Foundation
 import CoreData
 
 @objc(Song)
-public class Song: NSManagedObject, SongProtocol {
-    
-    var lsongName: String = ""
-    var lsongArtist: String = ""
-    
+public class Song: NSManagedObject {
+
     func getSongName() -> String {
-        return lsongName
+        return songName!
     }
     
     func getSongArtist() -> String {
-        return lsongArtist
+        return songArtist!
     }
     
 

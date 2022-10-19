@@ -6,20 +6,57 @@
 //
 
 import UIKit
+import CoreData
 
 
 class CollectionViewController: UICollectionViewController {
     
-    var collection: [Album] = []
     
+    //UI Stuff
     let screenSize: CGRect = UIScreen.main.bounds
     let margin: Int = 5
     
-    (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    //Core Data
+    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    var collection: [Album]?
+    
+    func fetchAlbums() {
+        do {
+            //Fill the collection array
+            self.collection = try context.fetch(Album.fetchRequest())
+            let result = try context.fetch(Album.fetchRequest())
+            if result.isEmpty{
+                initMusic()
+                try self.context.save()
+            }
+            
+            self.collectionView.reloadData()
+            
+        }
+        catch {
+            
+        }
+    }
+    
+    func fetchSongsFromAlbum(albumID: String) -> [Song]{
+        var songsFromAlbum = [Song]()
+        do {
+            let request = Song.fetchRequest() as NSFetchRequest<Song>
+            let pred = NSPredicate(format: "songAlbum.albumName CONTAINS %@", albumID)
+            request.predicate = pred
+            songsFromAlbum = try context.fetch(request)
+                    }
+        catch {
+            
+        }
+        return songsFromAlbum
+
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        collection = initMusic()
+        collection = []
+        fetchAlbums()
         collectionView.delegate = self
         collectionView.dataSource = self
         let layout = UICollectionViewFlowLayout()
@@ -28,18 +65,18 @@ class CollectionViewController: UICollectionViewController {
     }
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return collection.count
+        return collection!.count
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell: PlaylistCell = collectionView.dequeueReusableCell(withReuseIdentifier: "playlistCell", for: indexPath) as! PlaylistCell
     
-        if let url = URL(string: collection[indexPath.row].getImg()){
+        if let url = URL(string: collection![indexPath.row].getImg()){
             cell.imageOutlet.asyncLoad(from: url)
             cell.imageOutlet.layer.cornerRadius = 10.0
         }
-        cell.artistOutlet.text = collection[indexPath.row].getArtist()
-        cell.titleOutlet.text = collection[indexPath.row].getTitle()
+        cell.artistOutlet.text = collection![indexPath.row].getArtist()
+        cell.titleOutlet.text = collection![indexPath.row].getTitle()
     
         return cell
     }
@@ -52,17 +89,47 @@ class CollectionViewController: UICollectionViewController {
             if let nextViewController = segue.destination as? DetailViewController {
                 let cell = sender as! PlaylistCell
                 let indexPath = self.collectionView!.indexPath(for: cell)
-                nextViewController.songTitle = collection[indexPath!.row].getTitle()
-                nextViewController.songImage = collection[indexPath!.row].getImg()
-                nextViewController.songArtist = collection[indexPath!.row].getArtist()
-                nextViewController.songList = collection[indexPath!.row].getSongs()
+                nextViewController.songTitle = collection![indexPath!.row].getTitle()
+                nextViewController.songImage = collection![indexPath!.row].getImg()
+                nextViewController.songArtist = collection![indexPath!.row].getArtist()
+                nextViewController.songList = fetchSongsFromAlbum(albumID: collection![indexPath!.row].getTitle())
+                //nextViewController.songList = collection![indexPath!.row].getSongs()
             }
         }
     }
-    func initMusic() -> [Album]{
-        return [
-            Album(name: "album1", artist: "artist1", imageURL: "ttps://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fpbs.twimg.com%2Fmedia%2FFdCxkRxXoAQ5Qkv%3Fformat%3Djpg%26name%3Dmedium&f=1&nofb=1&ipt=9f8e98be263d1449bf53d17627b6816477362c40f4b7576d8465425f6480b576&ipo=images", songs: [])
-        ]
+    func initMusic() {
+        
+        //No albums therefore create an album
+        let newAlbumY3Y2 = Album(context: context)
+        newAlbumY3Y2.albumName = "Y3Y2"
+        newAlbumY3Y2.albumArtist = "Rojuu"
+        newAlbumY3Y2.albumPictureURL = "https://cdn.albumoftheyear.org/album/554040-y3y2.jpg"
+        var newSongY3Y2 = Song(context: context)
+        newSongY3Y2.songName = "Lugar Seguro 3.0"
+        newSongY3Y2.songArtist = "Rojuu"
+        newAlbumY3Y2.addToAlbumTracks(newSongY3Y2)
+        newSongY3Y2 = Song(context: context)
+        newSongY3Y2.songName = "Twilight"
+        newSongY3Y2.songArtist = "Rojuu, Saramalacara & Carzé"
+        newAlbumY3Y2.addToAlbumTracks(newSongY3Y2)
+        newSongY3Y2 = Song(context: context)
+        newSongY3Y2.songName = "Infinite Azure"
+        newSongY3Y2.songArtist = "Rojuu & Mda"
+        newAlbumY3Y2.addToAlbumTracks(newSongY3Y2)
+        newSongY3Y2 = Song(context: context)
+        newSongY3Y2.songName = "Makima"
+        newSongY3Y2.songArtist = "Rojuu & Carzé"
+        newAlbumY3Y2.addToAlbumTracks(newSongY3Y2)
+        newSongY3Y2 = Song(context: context)
+        newSongY3Y2.songName = "22"
+        newSongY3Y2.songArtist = "Rojuu & Carzé"
+        newAlbumY3Y2.addToAlbumTracks(newSongY3Y2)
+        newSongY3Y2 = Song(context: context)
+        newSongY3Y2.songName = "Mix Demencia 3"
+        newSongY3Y2.songArtist = "Rojuu & Carzé"
+        newAlbumY3Y2.addToAlbumTracks(newSongY3Y2)
+        
+        collection?.append(newAlbumY3Y2)
         
         /*let albumY3Y2 = [
             Song(song: "Lugar Seguro 3.0", artist: "Rojuu & Carzé"),
