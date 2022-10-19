@@ -56,7 +56,8 @@ class DetailViewController: UIViewController, UITableViewDelegate, UITableViewDa
                 
                 let addToPlaylist = UIAction(
                     title: "Add to a playlist",
-                    image: (UIImage(systemName: "text.badge.plus"))) { _ in
+                    image: (UIImage(systemName: "text.badge.plus")),
+                    attributes: .disabled) { _ in
                     print("tested")
                 }
                 let actionRemove = UIAction(
