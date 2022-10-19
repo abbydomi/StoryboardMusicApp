@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="21279" systemVersion="21G115" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Album" representedClassName="Album" syncable="YES">
+        <attribute name="albumArtist" optional="YES" attributeType="String"/>
+        <attribute name="albumName" optional="YES" attributeType="String"/>
+        <attribute name="albumPictureURL" optional="YES" attributeType="String"/>
+        <relationship name="albumTracks" optional="YES" toMany="YES" minCount="1" deletionRule="Nullify" destinationEntity="Song" inverseName="songAlbum" inverseEntity="Song"/>
+    </entity>
+    <entity name="Song" representedClassName="Song" syncable="YES" codeGenerationType="category">
+        <attribute name="songArtist" optional="YES" attributeType="String"/>
+        <attribute name="songName" optional="YES" attributeType="String"/>
+        <relationship name="songAlbum" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Album" inverseName="albumTracks" inverseEntity="Album"/>
+    </entity>
+</model>
