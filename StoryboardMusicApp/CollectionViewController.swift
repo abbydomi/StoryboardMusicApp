@@ -29,8 +29,10 @@ class CollectionViewController: UICollectionViewController {
                 initMusic()
                 try self.context.save()
             }
+            DispatchQueue.main.async {
+                self.collectionView.reloadData()
+            }
             
-            self.collectionView.reloadData()
             
         }
         catch {
