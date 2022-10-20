@@ -254,7 +254,10 @@
                                 </buttonConfiguration>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="center" contentVerticalAlignment="center" placeholder="Playlist Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qCE-tT-a0p">
-                                <rect key="frame" x="20" y="451" width="350" height="22"/>
+                                <rect key="frame" x="20" y="451" width="350" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="x0f-cS-s8D"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
@@ -284,7 +287,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="am8-3g-njb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="74" y="650"/>
+            <point key="canvasLocation" x="73.84615384615384" y="649.76303317535542"/>
         </scene>
         <!--Music-->
         <scene sceneID="9v9-Zr-2CR">
