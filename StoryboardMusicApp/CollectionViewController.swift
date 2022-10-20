@@ -29,8 +29,10 @@ class CollectionViewController: UICollectionViewController {
                 initMusic()
                 try self.context.save()
             }
+            DispatchQueue.main.async {
+                self.collectionView.reloadData()
+            }
             
-            self.collectionView.reloadData()
             
         }
         catch {
@@ -51,6 +53,10 @@ class CollectionViewController: UICollectionViewController {
         }
         return songsFromAlbum
 
+    }
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        fetchAlbums()
     }
     
     override func viewDidLoad() {
