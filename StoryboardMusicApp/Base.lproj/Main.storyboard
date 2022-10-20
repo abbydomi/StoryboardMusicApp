@@ -253,10 +253,17 @@
                                     <color key="baseBackgroundColor" systemColor="systemGray5Color"/>
                                 </buttonConfiguration>
                             </button>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="center" contentVerticalAlignment="center" placeholder="Playlist Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qCE-tT-a0p">
+                                <rect key="frame" x="20" y="451" width="350" height="22"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="PAc-F4-cs8"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="qCE-tT-a0p" firstAttribute="top" secondItem="6Ma-dp-nvK" secondAttribute="bottom" constant="30" id="LY4-0U-jVw"/>
+                            <constraint firstItem="qCE-tT-a0p" firstAttribute="leading" secondItem="PAc-F4-cs8" secondAttribute="leading" constant="20" id="Lgf-hq-hgg"/>
                             <constraint firstItem="cjB-3n-kpK" firstAttribute="leading" secondItem="PAc-F4-cs8" secondAttribute="leading" constant="10" id="UXv-gd-Qhb"/>
                             <constraint firstItem="PAc-F4-cs8" firstAttribute="trailing" secondItem="cjB-3n-kpK" secondAttribute="trailing" constant="10" id="VQd-iR-J8k"/>
                             <constraint firstItem="cjB-3n-kpK" firstAttribute="top" secondItem="PAc-F4-cs8" secondAttribute="top" id="aSv-vb-eZ9"/>
@@ -265,12 +272,14 @@
                             <constraint firstItem="PAc-F4-cs8" firstAttribute="trailing" secondItem="R3V-gp-TUo" secondAttribute="trailing" constant="15" id="i7b-oX-fYX"/>
                             <constraint firstItem="6Ma-dp-nvK" firstAttribute="leading" secondItem="PAc-F4-cs8" secondAttribute="leading" constant="67" id="p9F-95-YZa"/>
                             <constraint firstItem="PAc-F4-cs8" firstAttribute="trailing" secondItem="6Ma-dp-nvK" secondAttribute="trailing" constant="67" id="tHH-gB-xr0"/>
+                            <constraint firstItem="PAc-F4-cs8" firstAttribute="trailing" secondItem="qCE-tT-a0p" secondAttribute="trailing" constant="20" id="y4e-P4-8qD"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Add" image="plus" catalog="system" id="5Zo-tK-VYe"/>
                     <connections>
                         <outlet property="imageAlbumOutlet" destination="6Ma-dp-nvK" id="6Cz-JE-Beo"/>
                         <outlet property="photoButton" destination="8jy-lg-Qlx" id="CzE-im-8Pj"/>
+                        <outlet property="textField" destination="qCE-tT-a0p" id="XeM-k1-azz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="am8-3g-njb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

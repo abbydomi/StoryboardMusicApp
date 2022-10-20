@@ -54,6 +54,10 @@ class CollectionViewController: UICollectionViewController {
         return songsFromAlbum
 
     }
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        fetchAlbums()
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
